@@ -13,10 +13,6 @@ class Transaction extends Model
      *
      * @var array<int, string>
      */
-    const AUTHORIZED = 1;
-    const DECLINE = 2;
-    const REFUNDED = 3;
-
 
     protected $fillable = [
         'currency',
@@ -29,6 +25,6 @@ class Transaction extends Model
 
     public function user()
     {
-        return $this->belongsTo(Employee::class);
+        return $this->belongsTo(User::class);
     }
 }

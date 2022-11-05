@@ -22,7 +22,7 @@ Route::get('/', function () {
 /**
  * Users
  */
-Route::get('users', [UserController::class, 'index']);
+Route::get('users/{statuscode?}/{currency?}', [UserController::class, 'index']);
 Route::get('import-users', [UserController::class, 'import']);
 
 

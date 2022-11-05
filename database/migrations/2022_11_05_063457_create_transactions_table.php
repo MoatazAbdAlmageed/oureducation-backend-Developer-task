@@ -15,9 +15,10 @@ return new class extends Migration
     {
         Schema::create('transactions', function (Blueprint $table) {
             $table->string('id');
+            $table->unique('id');
             $table->string('currency');
             $table->string('parentEmail');
-            $table->string('statusCode');
+            $table->tinyInteger('statusCode');
             $table->date('paymentDate');
             $table->string('parentIdentification');
             $table->timestamps();
